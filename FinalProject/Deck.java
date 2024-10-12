@@ -70,8 +70,8 @@ public class Deck {
    * prints out the name, suit, and value of a given card from the deck.
    * @param i
    */
-  public void describe(int i) {
-    deck.get(i).describe();
+  public String describe(int i) {
+    return deck.get(i).describe();
   }
   
   /**

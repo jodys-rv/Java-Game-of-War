@@ -1,10 +1,8 @@
 package FinalProject;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 public class App {
 
   public static void main(String[] args) {
@@ -16,7 +14,9 @@ public class App {
     // which I make into separate decks. (I don't really know if it's better to make them
     // into decks or leave them as lists. Actually, maybe I should make them into decks in the
     // method, and return map<string, deck> instead.)
-   
+    
+    
+    
     Map<String, List<Card>> playerHands = new HashMap<>();
     playerHands = dealCards();
     Deck hand1 = new Deck(playerHands.get("player1"));
@@ -30,7 +30,7 @@ public class App {
     // I just saw that the instructions say to use a traditional for loop to do this part.
     // I tried a for loop first, but it only works if I hard code it with index < 26. If I 
     // try to do it with hand.size() or with a variable, it only executes the loop 13 times
-    // before throwing an out of bounds exception (which makes sense,  because the size of the hand
+    // before throwing an out of bounds exception (which makes sense, because the size of the hand
     // decreases every time I draw a card). I found this while loop more elegant, especially since I had 
     // already created the isEmpty() method for the part where all the cards are being dealt out.
     
@@ -59,6 +59,7 @@ public class App {
     } else {
       System.out.println("Tie!");
     }
+    
   }
   
   
